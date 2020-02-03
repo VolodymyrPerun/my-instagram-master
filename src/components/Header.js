@@ -8,11 +8,20 @@ export default class Header extends Component {
             <header>
                 <div className='container h-flex'>
                     <a href="#" className='logo'>
-                        <img src={logo}></img>
+                        <img src={logo} alt="logo"/>
                     </a>
+                    <nav className="links">
+                        <ul>
+                            <li>
+                                <a href="#" className="menu__links">Стрічка</a>
+                            </li>
+                            <li>
+                                <a href="#" className="menu__links">Профіль</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </header>
-
         );
     }
 }
