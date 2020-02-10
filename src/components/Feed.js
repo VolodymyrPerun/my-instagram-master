@@ -1,12 +1,12 @@
 import React from 'react';
 import Posts from './Posts';
-// import Users from './Users';
+import User from './User';
 
 export const Feed = () => {
     return (
         <div className="container feed">
             <Posts/>
-            {/*<Users/>*/}
+            <User/>
         </div>
     );
 }
