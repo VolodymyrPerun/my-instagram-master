@@ -19,6 +19,7 @@ export default class Post extends Component {
                     et dolore magna aliqua.
                 </div>
             </div>
+
         )
     }
 }
