@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import Post from "./Post";
+import ErrorMessage from "./Error";
 import InstaService from '../services/instaService'
 import User from "./User";
 
@@ -33,7 +33,7 @@ export default class Posts extends Component {
         })
     }
 
-    static renderItems (arr) {
+     renderItems (arr) {
         return arr.map(item => {
             const {name, altname, photo, src, alt, desc, id} = item;
 
@@ -56,9 +56,16 @@ export default class Posts extends Component {
     }
 
     render() {
+        const {error, posts} = this.state;
+
+        if (error) {
+            return <ErrorMessage/>
+        }
+
+        const items = this.renderItems(posts);
         return (
             <div className='left'>
-                <User/>
+                {items}
             </div>
         )
     }
