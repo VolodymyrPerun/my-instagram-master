@@ -1,6 +1,6 @@
 import React from 'react';
 import User from "./User";
-import {Palette} from "./Palette";
+import Palette from "./Palette";
 
 export const Profile = () => {
     return (
